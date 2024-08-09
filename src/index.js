@@ -332,36 +332,206 @@ import ReactDOM from 'react-dom/client';
 // r1.render(<Header/>)
 
 
-import './index.css';
-const Computer=()=>{
-    return(
-        <div>
-            <center>
-                <h1>WELCOME</h1>
-                <ul>
-                    <li><a href=''>Home</a></li>
-                    <li><a href=''>About</a></li>
-                    <li><a href=''>Login</a></li>
-                    <li><a href=''>Register</a></li>
-                </ul>
-                <br/><br/><br/><br/>
-                <form>
-                    <b><label>USERNAME</label></b>&nbsp;&nbsp;
-                    <input type='text' placeholder='text'/><br/><br/>
-                    <b><label>PASSWORD</label></b>&nbsp;&nbsp;
-                    <input type='password' placeholder='password'/>
-                </form>
-                <br/><br/>
-                <input type='login'placeholder='login' className='btn btn-info'/>
-                <br/><br/><br/>
-                <p>------------or--------------</p>
-                <br/><br/>
-                <p><i class='bx bxl-google'></i>Sign in with Google</p>
-                <br/>
-                <p>New Page? Create Account</p>
-            </center>
-        </div>
-    )
+// import './index.css';
+// const Computer=()=>{
+//     return(
+//         <div>
+//             <center>
+//                 <h1>WELCOME</h1>
+//                 <ul>
+//                     <li><a href=''>Home</a></li>
+//                     <li><a href=''>About</a></li>
+//                     <li><a href=''>Login</a></li>
+//                     <li><a href=''>Register</a></li>
+//                 </ul>
+//                 <br/><br/><br/><br/>
+//                 <form>
+//                     <b><label>USERNAME</label></b>&nbsp;&nbsp;
+//                     <input type='text' placeholder='text'/><br/><br/>
+//                     <b><label>PASSWORD</label></b>&nbsp;&nbsp;
+//                     <input type='password' placeholder='password'/>
+//                 </form>
+//                 <br/><br/>
+//                 <input type='login'placeholder='login' className='btn btn-info'/>
+//                 <br/><br/><br/>
+//                 <p>------------or--------------</p>
+//                 <br/><br/>
+//                 <p><i class='bx bxl-google'></i>Sign in with Google</p>
+//                 <br/>
+//                 <p>New Page? Create Account</p>
+//             </center>
+//         </div>
+//     )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Computer/>)
+
+
+// Changing the state object
+// class Sample extends React.Component
+// {
+//     constructor()
+//     {
+//         super();
+//         this.state={
+//             emp:{
+//                 name:"Menaga",
+//                 age:"25",
+//                 city:"karur"
+//             },
+//             ShowData:false
+//         };
+//     }
+//     ShowData()
+//     {
+//         this.setState({ShowData:true});
+//     }
+//     hideData()
+//     {
+//         this.setState({ShowData:false});
+//     }
+//     render()
+//     {
+//         let data;
+//         if(this.state.ShowData==true)
+//         {
+//             data=<div><b>city::</b>{this.state.emp.city}<b>name::</b>{this.state.emp.name}<br/><button onClick={this.hideData.bind(this)}>hideData</button></div>
+//         }
+//         else
+//         {
+//             data=<div><button onClick={this.ShowData.bind(this)}>ShowData</button></div>
+//         }
+//         return(
+//             <div>
+//                 <h1>Welcome</h1>
+//                 <h2>Employee Details</h2>
+//                 {data}
+//             </div>
+//         )
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Sample/>)
+
+
+// React Events  onclick
+// function Football(){
+// const shoot=()=>{
+//     alert("Goal shooted")
+// }
+// return(
+//     <div>
+//         <button onClick={shoot}>shoot</button>
+//     </div>
+// )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Football/>)
+
+
+// Onclick  anyther way
+// function Football(){
+//     const shoot=(a)=>{
+//         alert(a)
+//     }
+//     return(
+//         <div>
+//             <button onClick={()=>shoot("Gooal shooted")}>shoot</button>
+//         </div>
+//     )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Football/>)
+
+
+
+// conditional rendering
+
+// function MissedGoal()
+// {
+//     return<h1>Missed</h1>
+// }
+// function MadeGoal()
+// {
+//     return<h1>Goal</h1>
+// }
+// function Goal(props)
+// {
+//     const isGoal=props.isGoal;
+//     if(isGoal)
+//     {
+//         return<MadeGoal/>
+//     }else
+//     {
+//         return<MissedGoal/>
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Goal isGoal={Math.random()>0.5}/>);
+
+
+
+// React list
+// function Car(props)
+// {
+//     return<li>I am a{props.b1}</li>
+// }
+// function Garage()
+// {
+//     const cars=["BMW","Audi","Mercedes"]
+//     return(
+//         <div>
+//             <h1>Garage</h1>
+//             <ul>
+//                 {cars.map((car)=><Car b1={car}/>)}
+//             </ul>
+//         </div>
+//     )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Garage/>);
+
+
+// React form
+// function Myform()
+// {
+//     return(
+//         <form>
+//             <label>Username</label>
+//             <input type='text' name='' id=''/>
+//             <br/>
+//             <label>password</label>
+//             <input type='text'/>
+//             <br/>
+//             <button type='submit'>submit</button>
+//         </form>
+//     )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Myform/>);
+
+
+
+// React getderived state fromprops
+class Header extends React.Component
+{
+    constructor(props)
+    {
+        super(props);
+        this.state={favcolor:"Red"};
+    }
+    static getDerivedStateFromProps(props,state)
+    {
+        return{favcolor:props.favcolor};
+    }
+    render()
+    {
+        return(
+            <div>
+                <h1>My fav color is{this.state.favcolor}</h1>
+            </div>
+        )
+    }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Computer/>)
+r1.render(<Header favcolor="blue"/>)
